@@ -535,15 +535,18 @@ body::after {
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    align-items: center;
-    height: 100%;
+    align-items: stretch;
+    height: 60vh;
+    min-height: 400px;
 }
 
 .about-visual {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    justify-content: center;
+    gap: 1.5rem;
+    height: 100%;
 }
 
 .about-character {
@@ -563,6 +566,7 @@ body::after {
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: auto;
 }
 
 .stat-card {
@@ -622,7 +626,10 @@ body::after {
     position: relative;
     z-index: 1;
     backdrop-filter: blur(10px);
-    height: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .about-header {
