@@ -949,6 +949,94 @@ body::after {
     text-shadow: 0 0 5px #00FFFF;
 }
 
+/* ===== ADVANCED SCROLL TRANSITION EFFECTS ===== */
+
+/* Base scroll animation */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    filter: blur(5px);
+}
+
+.scroll-animate.animate-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+}
+
+/* Staggered animation delays */
+.scroll-animate:nth-child(1) { transition-delay: 0s; }
+.scroll-animate:nth-child(2) { transition-delay: 0.1s; }
+.scroll-animate:nth-child(3) { transition-delay: 0.2s; }
+.scroll-animate:nth-child(4) { transition-delay: 0.3s; }
+
+/* Section-specific entrance animations */
+.section-slide-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.section-slide-left.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.section-slide-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.section-slide-right.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.section-fade-up {
+    opacity: 0;
+    transform: translateY(80px) rotateX(15deg);
+    transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center bottom;
+}
+
+.section-fade-up.animate-in {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+}
+
+/* Card entrance animations */
+.card-animate {
+    opacity: 0;
+    transform: translateY(40px) rotateY(15deg);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center;
+}
+
+.card-animate.animate-in {
+    opacity: 1;
+    transform: translateY(0) rotateY(0deg);
+}
+
+/* Link button wave animation */
+.link-wave {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.link-wave.animate-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Enhanced scroll indicator */
+.scroll-indicator:hover {
+    transform: translateY(-5px) scale(1.1);
+    text-shadow: 0 0 8px #00FFFF;
+}
+
 .footer::before {
     content: '';
     position: absolute;
