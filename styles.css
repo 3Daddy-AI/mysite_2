@@ -814,7 +814,7 @@ body::after {
     margin: 0 auto;
 }
 
-/* Twitter DM Contact Card */
+/* X DM Contact Card */
 .contact-dm-card {
     background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(255, 0, 255, 0.1) 100%);
     border: 1px solid rgba(0, 255, 255, 0.3);
@@ -849,6 +849,19 @@ body::after {
     font-size: 2rem;
     color: #1DA1F2;
     text-shadow: 0 0 10px rgba(29, 161, 242, 0.5);
+}
+
+.dm-icon-img {
+    width: 2rem;
+    height: 2rem;
+    filter: invert(1);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.dm-icon-img:hover {
+    opacity: 1;
+    filter: invert(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
 }
 
 .dm-header h3 {
