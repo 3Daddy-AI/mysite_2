@@ -528,15 +528,14 @@ body::after {
     50% { opacity: 0.6; }
 }
 
-/* About Section Layout */
+/* About Section Layout - Optimized for Dynamic Height Equalizer */
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    align-items: stretch;
-    height: 60vh;
+    align-items: start;
     min-height: 400px;
 }
 
@@ -546,7 +545,9 @@ body::after {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    height: 100%;
+    /* Height will be set dynamically by JavaScript */
+    transition: height 0.3s ease;
+    position: relative;
 }
 
 .about-character {
@@ -626,10 +627,11 @@ body::after {
     position: relative;
     z-index: 1;
     backdrop-filter: blur(10px);
-    height: 100%;
+    /* Height will be set dynamically by JavaScript */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: height 0.3s ease;
 }
 
 .about-header {
